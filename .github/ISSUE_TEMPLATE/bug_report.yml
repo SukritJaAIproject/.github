@@ -1,0 +1,35 @@
+name: Bug report
+description: Something does not work as documented
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the report. Thai or English is fine. Please remove anything that identifies a real station, vehicle, patient or person before attaching logs.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you run, what happened, and what did you expect instead?
+      placeholder: Steps to reproduce, actual result, expected result
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+      description: Release tag, installer version, or commit hash
+      placeholder: v1.1.0 / 3f8d6ce
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: OS, Python version, GPU or hardware if relevant
+      placeholder: Windows 11, Python 3.11, RTX 4060
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Paste logs or tracebacks. This is rendered as code automatically.
+      render: shell
